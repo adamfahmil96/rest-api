@@ -90,3 +90,14 @@ Bekerja dengan JSON:
         - JSON.stringify()  = mengubah Object menjadi JSON
         - JSON.parse()      = mengubah JSON menjadi Object
         * Cara mengakses JSON: ajax (XMLHttpRequest (disebut vanilla Javascript atau Javascript murni) atau JQuery)
+
+Bekerja dengan JSON di luar domain, maka perhatikan Same-origin Policy:
+    = Kebijakan browser untuk mengakses dan menampilkan data/script/document dari tempat lain di luar domainnya.
+    = Hal ini membuat kita tidak bisa mengakses data (.json) dari luar domain/website kita.
+    = Cara?
+        1. CORS (Cross Origin Resource Sharing):
+            - mekanisme yang membuat kita dapat mengakses sebuah resource dari domain lain.
+            - caranya adalah dengan membuat server memperbolehkan adanya akses data dari luar domain.
+            - modifikasi Access-Control-Allow-Origin
+            - membuat file .htaccess
+        2. JSONP
