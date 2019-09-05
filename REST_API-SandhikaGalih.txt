@@ -1,0 +1,92 @@
+		REST API
+		--------
+# Sebuah catatan dari Tutorial Pak Sandhika		
+# oleh: Muhammad Adam Fahmil 'Ilmi
+
+
+Apa itu API?
+	= API (Application Programming Interface) adalah sekumpulan fungsi, subroutine, protokol komunikasi, atau tools untuk membuat perangkat lunak.
+	= Interface yang berupa kumpulan fungsi yang dapat dipanggil atau dijalankan oleh program lain.
+	= Penerapan: bahasa pemrograman, library, framework, OS, Web API/Service.
+
+Apa itu Interface?
+	Bagian yang sama antara dua atau lebih komponen terpisah pada sebuah sistem komputer.
+
+Web API/Web Service:
+	= Sebuah sistem perangkat lunak yang dibuat untuk mendukung interaksi antar 2 aplikasi yang berbeda melalui jaringan.
+	= Cara:
+		1. SOAP (Simple Object Access Protocol)
+		2. REST (REpresentational State Transfer)
+
+Apa itu REST API?
+	= Gaya arsitektural perangkat lunak yang di dalamnya mendefinisikan aturan-aturan untuk membuat web service.
+	= Biasanya orang menyebut API itu maksudnya adalah REST API :)
+	= Ilustrasi:
+		- Dalam sebuah restoran, API dianalogikan sebagai menu makanan. Kita tidak bisa request makanan di luar dari menu.
+		- API sebagai penghubung.
+		- REST API adalah aturannya.
+		- Ada request dan response.
+		- Data yang dikirim/diterima berupa JSON.
+	= Ciri:
+		- Gaya perancangan
+		- Hampir selalu menggunakan HTTP
+		- Memungkinkan interaksi antar mesin
+
+URL
+	= Alamat dari sebuah resource yang dapat diakses di internet.
+
+Bagaimana pengaksessan REST API?
+	1. User mengirimkan request beserta data (jika ada) ke server aplikasi User.
+	2. Server aplikasi User mengirimkan request dan mengubah data menjadi JSON ke REST Server.
+	3. REST Server memproses request, entah meminta ke databasenya atau ke API lain.
+	4. Setelah diproses oleh REST Server, data dikembalikan berupa JSON beserta kode status.
+	5. Server aplikasi User yang telah menerima respon berupa JSON tadi (nomor 4) kemudian mengubah respon menjadi HTML (atau yang lain) sehingga User dapat melihat hasil respon.
+
+HTTP Method/Verbs:
+	1. GET    = mengambil data
+	2. POST   = menambah data
+	3. PUT    = mengubah data
+	4. DELETE = menghapus data
+	* Untuk menerapkan RESTful, maka harus menerapkan semua method tersebut.
+	
+Stateless (ketidakadaan sebuah state dalam aplikasi):
+	- Setiap request HTTP dilakukan secarat terisolasi.
+	- Server tidak menyimpan state apapun mengenai sesi dari klien.
+	- Setiap request dari klien harus berisi semua informasi yang dibutuhkan server, termasuk informasi otentikasi.
+
+RESTful API:
+	1. Menggunakan HTTP method yang benar
+	2. URI/endpoints-nya menggunakan kata benda, bukan kata kerja.
+	3. Stateless
+	
+Apa itu JSON?
+	= JSON (Javascript Object Notation) adalah sebuah file format standar yang menggunakan tulisan yang dapat dibaca oleh manusia untuk pertukaran data, yang di dalamnya berisi pasangan antara key dan value.
+	= Ciri:
+		1. Format pertukaran data tekstual yang sangat ringan.
+		2. Sintaksnya sangat sederhana dan jelas (dibanding XML).
+		3. Dapat digunakan pada berbagai bahasa pemrograman.
+		4. Tiap bahasa pemrograman memiliki cara tersendiri untuk berinteraksi dengan JSON.
+		5. Dibuat berdasarkan format Object pada Javascript.
+		6. Digunakan juga untuk file konfigurasi.
+		7. Memiliki ekstensi .json.
+		8. Diusulkan oleh Douglas Crockford, sang jagoan Javascript.
+	= Tipe data dari value pada JSON:
+		- Boolean
+		- Array
+		- String
+		- Object
+		- Number
+		- Null		(null)
+
+Apa itu Object (pada Javascript)?
+	= Kumpulan property, dan property ditulis dalam bentuk pasangan antara key dan value.
+
+Bekerja dengan JSON:
+    1. PHP
+        - json_encode() = mengubah array (associative) atau Object menjadi JSON
+        - json_decode() = mengubah JSON menjadi array (associative)
+        - file_get_contents() = salah satu cara mengambil JSON
+    2. Javascript
+        - JSON.stringify()  = mengubah Object menjadi JSON
+        - JSON.parse()      = mengubah JSON menjadi Object
+        * Cara mengakses JSON: ajax (XMLHttpRequest (disebut vanilla Javascript atau Javascript murni) atau JQuery)

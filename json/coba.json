@@ -1,0 +1,28 @@
+[
+    {
+        "nama": "Muhammad Adam",
+        "umur": 23,
+        "nim" : "M0514031",
+        "lulus" : true,
+        "hobi" : [
+            "coding", "reading"
+        ],
+        "pembimbing" : {
+            "pembimbing1": "Afrizal Doewes",
+            "pembimbing2": "Wiharto"
+        }
+    },
+    {
+        "nama": "Muhammad Adam",
+        "umur": 23,
+        "nim" : "M0514031",
+        "lulus" : true,
+        "hobi" : [
+            "coding", "reading"
+        ],
+        "pembimbing" : {
+            "pembimbing1": "Afrizal Doewes",
+            "pembimbing2": "Wiharto"
+        }
+    }
+]
