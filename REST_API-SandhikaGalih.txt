@@ -101,3 +101,17 @@ Bekerja dengan JSON di luar domain, maka perhatikan Same-origin Policy:
             - modifikasi Access-Control-Allow-Origin
             - membuat file .htaccess
         2. JSONP
+
+Apa itu Public API?
+    = Sebuah API (REST API) yang dapat diakses secara publik, yang di dalamnya tersedia aturan untuk developer agar dapat mengakses data.
+    = Intinya, kita dapat membuat aplikasi menggunakan data yang dimiliki oleh aplikasi orang lain. Namun, kita harus perhatikan otentikasi.
+    = contoh:
+        - console.developers.google.com
+        - developers.facebook.com
+        - any-api.com
+        - github.com/toddmotto/public-apis
+        - github.com/farizdotid
+    = Otentikasi (Auth) dari API:
+        - tanpa otentikasi
+        - otentikasi dengan key/token
+        - otentikasi dengan OAuth
