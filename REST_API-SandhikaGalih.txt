@@ -86,6 +86,7 @@ Bekerja dengan JSON:
         - json_encode() = mengubah array (associative) atau Object menjadi JSON
         - json_decode() = mengubah JSON menjadi array (associative)
         - file_get_contents() = salah satu cara mengambil JSON
+		- cURL = salah satu cara mengoneksikan dengan API
     2. Javascript
         - JSON.stringify()  = mengubah Object menjadi JSON
         - JSON.parse()      = mengubah JSON menjadi Object
