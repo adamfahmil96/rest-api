@@ -110,7 +110,10 @@ $config['rest_realm'] = 'REST API';
 |           authorization key
 |
 */
-$config['rest_auth'] = false;
+
+// mengatur pengaksesan api dg login dahulu
+// $config['rest_auth'] = false;
+$config['rest_auth'] = 'basic';
 
 /*
 |--------------------------------------------------------------------------
@@ -126,7 +129,8 @@ $config['rest_auth'] = false;
 | Note: If 'rest_auth' is set to 'session' then change 'auth_source' to the name of the session variable
 |
 */
-$config['auth_source'] = 'ldap';
+// $config['auth_source'] = 'ldap';
+$config['auth_source'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -211,7 +215,11 @@ $config['auth_library_function'] = '';
 | Array of usernames and passwords for login, if ldap is configured this is ignored
 |
 */
-$config['rest_valid_logins'] = ['admin' => '1234'];
+
+// rest valid logins
+// nanti diatur menggunakan database sebagai autentikasi logins
+// $config['rest_valid_logins'] = ['admin' => '1234'];
+$config['rest_valid_logins'] = ['admin' => '1234', 'adam' => 'wpu123'];
 
 /*
 |--------------------------------------------------------------------------
@@ -299,6 +307,8 @@ $config['rest_database_group'] = 'default';
 | The table name in your database that stores API keys
 |
 */
+
+// tabel untuk membuat key
 $config['rest_keys_table'] = 'keys';
 
 /*
@@ -324,7 +334,8 @@ $config['rest_keys_table'] = 'keys';
 |   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 |
 */
-$config['rest_enable_keys'] = false;
+// $config['rest_enable_keys'] = false;
+$config['rest_enable_keys'] = true;
 
 /*
 |--------------------------------------------------------------------------
@@ -364,6 +375,8 @@ $config['rest_limits_method'] = 'ROUTED_URL';
 | Note: The maximum length is 40
 |
 */
+
+// panjang maksimum key
 $config['rest_key_length'] = 40;
 
 /*
@@ -377,7 +390,9 @@ $config['rest_key_length'] = 40;
 | 2012/06/12. See RFC 6648 specification for more details
 |
 */
-$config['rest_key_name'] = 'X-API-KEY';
+
+// nama key di url
+$config['rest_key_name'] = 'wpu-key';
 
 /*
 |--------------------------------------------------------------------------
@@ -487,7 +502,10 @@ $config['rest_logs_json_params'] = false;
 |
 | See application/controllers/api/example.php for examples
 */
-$config['rest_enable_limits'] = false;
+
+// mengatur limit pengaksesan
+// ingat, limitnya utk masing-masing method per jam
+$config['rest_enable_limits'] = true;
 
 /*
 |--------------------------------------------------------------------------

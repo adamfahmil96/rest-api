@@ -21,6 +21,9 @@ class Mahasiswa extends CI_Controller {
 
         // model
         $this->load->model('Mahasiswa_model', 'mahasiswa');
+
+        // limit pengaksesan api
+        $this->methods['index_get']['limit'] = 2;
     }
 
     public function index_get(){
