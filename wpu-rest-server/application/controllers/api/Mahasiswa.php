@@ -23,7 +23,7 @@ class Mahasiswa extends CI_Controller {
         $this->load->model('Mahasiswa_model', 'mahasiswa');
 
         // limit pengaksesan api
-        $this->methods['index_get']['limit'] = 2;
+        $this->methods['index_get']['limit'] = 100;
     }
 
     public function index_get(){

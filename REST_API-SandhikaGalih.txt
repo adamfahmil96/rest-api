@@ -87,6 +87,7 @@ Bekerja dengan JSON:
         - json_decode() = mengubah JSON menjadi array (associative)
         - file_get_contents() = salah satu cara mengambil JSON
 		- cURL = salah satu cara mengoneksikan dengan API
+		- Guzzle = sebuah library http client untuk mengakses API dengan lebih mudah
     2. Javascript
         - JSON.stringify()  = mengubah Object menjadi JSON
         - JSON.parse()      = mengubah JSON menjadi Object
@@ -116,3 +117,8 @@ Apa itu Public API?
         - tanpa otentikasi
         - otentikasi dengan key/token
         - otentikasi dengan OAuth
+
+Composer #QuickTip-4
+	= dependency manager di PHP
+	= bisa jadi script PHP kita bergantung dengan script PHP yang lain, oleh karena itu butuh pengelolaan file-file script PHP
+	= Packagist, sebuah tempat yang digunakan untuk menyimpan script-script yang kita butuhkan
